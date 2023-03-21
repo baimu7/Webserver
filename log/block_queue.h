@@ -25,7 +25,7 @@ public:
     int max_size();
     bool push(const T &item);
     bool pop(T &item);
-    bool pop(T &item, int ms_timeout);
+    bool pop(T &item, int ms_timeout);//超时取消操作
 
 private:
     locker m_mutex;
