@@ -11,6 +11,7 @@ using namespace std;
 
 template <class T>
 
+//定义日志阻塞队列
 class block_queue
 {
 public:
