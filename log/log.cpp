@@ -133,7 +133,7 @@ void Log::write_log(int level, const char *format, ...)
 
     m_mutex.lock();
 
-    //写入日志内容,格式:时间+内容
+    //写入日志内容,格式:时间+日志级别+日志内容
     int n = snprintf(m_buf, 48, "%d-%02d-%02d %02d:%02d:%02d.%06ld %s", my_tm.tm_year + 1990, my_tm.tm_mon + 1,
                      my_tm.tm_mday, my_tm.tm_hour, my_tm.tm_min, my_tm.tm_sec, now.tv_usec, s);      
     // 使用vsnprintf()用于向一个字符串缓冲区打印格式化字符串，且可以限定打印的格式化字符串的最大长度
