@@ -44,7 +44,7 @@ public:
     string m_User;         // 登录数据库用户名
     string m_PassWord;     // 登录数据库密码
     string m_Databasename; // 使用数据库名
-    int m_close_log;       // 日志开关
+    int m_close_log;       // 是否打开日志
 };
 
 class connnectionRAII
