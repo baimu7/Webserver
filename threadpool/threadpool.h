@@ -2,8 +2,6 @@
 #define THREADPOOL_H
 
 #include <list>
-#include <cstdio>
-#include <exception>
 #include <pthread.h>
 #include "../lock/locker.h"
 #include "../CGImysql/sql_connection.h"

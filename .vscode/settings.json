@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "list": "cpp",
+        "chrono": "cpp",
+        "condition_variable": "cpp",
+        "ctime": "cpp",
+        "mutex": "cpp",
+        "thread": "cpp"
+    }
+}

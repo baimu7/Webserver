@@ -1,9 +1,6 @@
-#include <list>
 #include <cstdio>
 #include <exception>
-#include <pthread.h>
-#include "../lock/locker.h"
-#include "../CGImysql/sql_connection.h"
+
 #include "threadpool.h"
 
 template <class T>
@@ -28,6 +25,7 @@ threadpool<T>::threadpool(int actor_model, connection_pool *connPool, int thread
     for (int i = 0; i < thread_number; ++i)
     {   
         //创建线程,处理函数为worker,传递函数参数指针this
+        //静态成员函数没有 this 指针，不知道指向哪个对象,故需要this指针指明threadpool类对象,调用其成员函数
         if (pthread_create(m_threads + i, NULL, worker, this) != 0)
         {
             delete[] m_threads;
